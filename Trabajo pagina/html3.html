@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+</head>
+<style>
+    body{background-color: #e5c995; }
+    .titulo{
+             border: 4px solid #000000;
+             position :absolute;
+             width :1231px;
+             height :100px;
+             left :335px;
+             top :20px;
+             background: #CEA659;
+             backdrop-filter: blur(4px);
+             box-sizing: border-box;
+            
+    }
+    h1{position: absolute;
+width: 519px;
+height: 83px;
+left: 525px;
+top: 7px;
+
+
+font-family: 'Inter';
+font-style: italic;
+font-weight: 200;
+font-size: 60px;
+line-height: 20px;
+        }
+        .formulario{
+    background-color: #d1b962;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  textarea {
+    width: 100%;
+    height: 150px 6;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+  }
+  #chk1{
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  #chk2{
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  #chk3{
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+#mostrarporcionpromo1{
+    display: none;
+}
+
+#mostrarporcionpromo2{
+    display: none;
+}
+#mostrarporcionpromo3{
+      display: none;
+  }
+
+    </style>
+<body>
+    <header>
+        <div class="titulo">
+            <h1>Delivery</h1>
+        </div>
+       
+          <div class="formulario"><form action="" method="get" id="envioform" required><br>
+          <div> <label for="nombreform" ><br>
+                 Nombre
+             </label>
+          </div>
+          <div>
+             <input type="text" id="nombreform" required><br>
+             <label for="nombreform" >
+                 Apellido
+             </label>
+         </div>
+         <div>
+             <input type="text" id="apellidoform" required><br>
+             <label for="telefonoform" >
+                 Teléfono de contacto
+             </label>
+         </div>
+         <div>
+             <input type="text" id="telefonoform"><br>
+             <label>
+                 Seleccione el producto que desea comprar:
+             </label>
+         </div>
+             <div>
+             <input name="promo1" type="checkbox" name="promo1" value="pollo" id="chk1">
+             <label for="promo1">
+              Sandwicht de jamon y queso</label>
+             
+             <div id="mostrarporcionpromo1" >
+             <label for="promo1porcion">Porciones:</label>
+             <select id="promo1porcion" name="Promo1porcion">
+                 <option value="0">0</option>
+                 <option value="1">1</option>
+                 <option value="2">2</option>
+                 <option value="3">3</option>
+                 <option value="4">4</option>
+                </select> 
+              </div>
+            </div>
+            <div>
+             <input name="promo2" type="checkbox" name="promo1" value="empanadas" id="chk2">
+             <label for="promo2">Facturas</label>
+             <div id="mostrarporcionpromo2">
+                <label for="promo2porcion">Cantidad: </label>
+                <select id="promo2porcion" name="Promo2porcion">
+                   <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                 </select> <br>
+               </div>
+             </div>
+             <div>  
+                <input name="promo3" type="checkbox" name="promo3" value="milanesa" id="chk3" >
+                <label for="promo3">Tostado </label>
+                <div id="mostrarporcionpromo3">
+                    <label for="promo3porcion">Cantidad:</label>
+                    <select id="promo3porcion" name="Promo3porcion">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                    </select> 
+              </div>
+             </div>
+             <div>
+             <label> Agregar un comentario adicional sobre la compra</label><br>
+             <textarea name="mensaje" rows="10" cols="60">
+              </textarea><br>
+             </div>
+              <input type="submit" onclick="alerta()" value="enviar">             
+         </form>
+        </div>
+        <script>
+          function alerta(){
+            alert("su pedido fue sido enviado exitosamente");
+          }
+
+        </script>
+       </div>
