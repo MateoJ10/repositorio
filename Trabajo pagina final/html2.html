@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="https://kit.fontawesome.com/887a835504.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body{background-color:#CEA659;;}
+    .titulo{               
+    background-color:#CEA659;
+    display: flex; justify-content: center;
+    position:absolute;
+    top: 840px;
+    margin: 8px;
+    border: 3px, solid;
+    font-size: 20px;
+    padding: 10px;
+    width: 98%;
+    height: 5%;
+    font-family: 'Inter';
+    font-weight: 200px;
+    font-style: italic;
+    line-height: 20px;
+    font-size: 40px;
+    border: 4px solid; 
+     }  
+    
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carrousel{
+    width: 100%;
+    
+  
+}
+
+.conteCarrousel{
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+#itemCarrousel-1{
+    background-color: rgb(226, 50, 50);
+}
+
+#itemCarrousel-2{
+    background-color: rgb(50, 200, 226);
+}
+
+#itemCarrousel-3{
+    background-color: rgb(200, 226, 50);
+}
+
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 2em;
+    color: grey;
+}
+
+.itemCarrouselArrows > a > i{
+    color: black;
+}
+img{width: 100%;
+height: 100%;}
+.cuadro{
+    background-color: #D1B962;
+    display: flex;
+    position:absolute;
+    top: 890px;
+    margin: 30px;
+    border: 4px, solid;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:25px;
+    padding: 10px;
+    width: 98%;
+}
+.cuadro2{
+    background-color: #D1B962;
+    display: flex;
+    position:absolute;
+    top: 980px;
+    margin: 30px;
+    border: 4px, solid;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:25px;
+    padding: 10px;
+    width: 98%;
+
+}
+</style>
+<body>
+    <div class="titulo">
+        Menu
+    </div>
+    <div class="cuadro">
+        <p>
+        Bebidas:
+          Expreso $100
+          Cafe Latte $150
+          Cappuccino $120
+          Moca $180
+        </p>
+    </div>
+    <div class="cuadro2">
+        <p>
+        Bocadillos:
+          Sandwicht de jamon y queso $250
+          Facturas con cafe $300  
+          Tostado $150</p>  
+          Medialunas con jamon y queso $200
+        </p>
+    </div>
+
+    <div class="carrousel">
+        <div class="conteCarrousel">
+            <div class="itemCarrousel" id="itemCarrousel-1">
+                <img src="/img/46349.jpg" alt="latte">
+                <div class="itemCarrouselTarjeta">A</div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-2">
+                <img src="/img/recetas-de-cocina-cafe-cortado-opfhtdsxg5c55dsm4zyc01v88feskg3f1d2axwlglc.jpg" alt="cafe">
+                <div class="itemCarrouselTarjeta">B</div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-3">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="itemCarrousel-3">
+                <img src="img/Coffee-shop-food-5.png" alt="comida">
+                <div class="itemCarrouselTarjeta">C</div>
+                <div class="itemCarrouselArrows">
+                    <a href="#itemCarrousel-2">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a href="#itemCarrousel-1">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="conteCarrouselController">
+            <a href="#itemCarrousel-1">•</a>
+            <a href="#itemCarrousel-2">•</a>
+            <a href="#itemCarrousel-3">•</a>
+        </div>
+    </div>
+</body>
+</html>
